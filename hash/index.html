@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <title>Index</title>
+</head>
+<center>
+<body style="background-color:LightBlue">
+    <center>
+        <h1>Crypt-Decrypt</h1>
+    </center>
+    <br><br>
+    <form action="action.php" method="post">
+        <textarea style = "background-color:LightGreen" name="plain" placeholder="Plaintext" id="plain" cols="50" rows="10"></textarea>
+        <button id="enc" type="submit">encode</button>
+    </form>
+
+    <form action="action.php">
+        <textarea style="background-color:LightGrey" placeholder="hashed text" name="crypt" id="crypt" cols="50" rows="10"></textarea>
+        <button id="dec" type="submit">decode</button>
+    </form>
+</body>
+</center>
+</html>

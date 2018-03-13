@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Flames</title>
+</head>
+
+    <body style="background-color:black;border:solid white">
+        <h1 style="color:white;margin-left:19em"> <i style="color:red">F</i>riend </h1>
+        <h1 style="color:white;margin-left:19em"> <i style="color:red">L</i>ove </h1>
+        <h1 style="color:white;margin-left:19em"> <i style="color:red">A</i>ffair </h1>
+        <h1 style="color:white;margin-left:19em">  <i style="color:red">M</i>arraige  </h1>
+        <h1 style="color:white;margin-left:19em"> <i style="color:red">E</i>nemy </h1>
+        <h1 style="color:white;margin-left:19em"> <i style="color:red">S</i>ister </h1>
+
+        <form action="action.php" method="post">
+            <input style="margin-left:40em" type="text" id="s1" name="s1" placeholder="Enter first name" required><br><br>
+            <input style="margin-left:40em" type="text" id="s2" name="s2" placeholder="Enter second name" required><br><br>
+            <button style="margin-left:41em" type="submit">check relationship</button><br>
+        </form>
+
+
+        <script>
+
+            $(document).ready(()=>{
+
+                $("button").on("click",(e)=>{
+                    e.preventDefault();
+                    $.post("action.php",{s1:$("#s1").val(),s2:$("#s2").val()},(data)=>{
+                        alert(data);
+                        $("#s1").val('');
+                        $("#s2").val('');
+                    });
+                });
+            });
+
+        </script>
+
+    </body>
+
+</html>

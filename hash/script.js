@@ -25,4 +25,11 @@ $(document).ready(function(){
         });
     });
 
+    $("#clear").on("click",(e)=>{
+        e.preventDefault();
+        $("#plain").val('');
+        $("#crypt").val('');
+
+    });
+
 });
